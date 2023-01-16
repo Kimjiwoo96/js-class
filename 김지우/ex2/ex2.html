@@ -37,8 +37,15 @@
         h1{
             font-size: 1.1rem;
             width:370px;
-            height:30px;
             margin: 20px auto;
+            overflow: hidden;
+            white-space: normal;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-break: keep-all;
+            text-overflow:ellipsis;
         }
 
         p{
