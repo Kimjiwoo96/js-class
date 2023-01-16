@@ -7,6 +7,11 @@
     <title>숙제</title>
 
     <style>
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
         .eventList{
             box-sizing: border-box;
             width:1180px;
@@ -28,6 +33,7 @@
             height:180px;
             margin: 20px auto;
         }
+
         figure img{
             width:100%;
             height:100%;
@@ -66,7 +72,7 @@
 <body>
     <!-- 참고사이트 -->
     <!-- https://www.pearlabyss.com/ko-KR/Board/Media -->
-    <!-- 
+    <!--
         다음 페이지의 내용을 보고 알맞은 데이터형태를 구성해보시오~!
         완성시안 및 사이트 참고
         1.태그형태는 아래에 주어진 eventList클래스 안에 적절히 들어갈 수 있도록 자유롭게 구성할 것.
@@ -85,6 +91,7 @@
 
         </div>
     </div>
+
     <script>
 
         var Gamelist = [
@@ -101,14 +108,14 @@
 
         for(let i = 0; i<Gamelist.length; i++){
             list += `
-            <div class="contents">
+            <a href="#" class="contents">
             <figure>
                 <img src="${Gamelist[i].image}" alt="${Gamelist[i].title}">
             </figure>
             <h1>${Gamelist[i].title}</h1>
             <p class="content">${Gamelist[i].description}</p>
             <p class="date">${Gamelist[i].date}</p>
-            </div>`
+            </a>`
         }
 
         document.querySelector(".eventList").innerHTML = list;
